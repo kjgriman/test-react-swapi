@@ -18,4 +18,14 @@ cd test-react-swapi
 npm install
 npm run dev
 
+### Screen Shots
+![Alt text](https://github.com/kjgriman/test-react-swapi/blob/master/public/Screenshot_1.png "screenshot 1")
+![Alt text](https://github.com/kjgriman/test-react-swapi/blob/master/public/Screenshot_2.png "screenshot 2")
+![Alt text](https://github.com/kjgriman/test-react-swapi/blob/master/public/Screenshot_3.png "screenshot 3")
+![Alt text](https://github.com/kjgriman/test-react-swapi/blob/master/public/Screenshot_4.png "screenshot 4")
+![Alt text](https://github.com/kjgriman/test-react-swapi/blob/master/public/Screenshot_5.png "screenshot 5")
+
+
+
+
 
