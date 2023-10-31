@@ -17,7 +17,7 @@ export function useSearch(categorie){
     const onSearchSubmit = (event) => {
         if (event.key !== 'Enter') return;
         setLoading(true)
-        searchByCategory(textSeacrh,categorie)
+        searchByCategory(textSeacrh, categorie)
             .then((result) => {
                 if (result.results.length == 0) setErrorMessage({ hasError: true, message: err.message })
                 else setErrorMessage({ hasError: false})
