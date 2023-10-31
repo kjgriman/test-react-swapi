@@ -1,3 +1,5 @@
+![Screenshot_1](https://github.com/kjgriman/test-react-swapi/assets/29762514/3d473be7-07f6-48c1-a418-93521d7d29c0)
+
 # test-react-swapi
 tecnical test react reactrouter css axios
 
@@ -26,7 +28,6 @@ npm run dev
 ![Alt text](https://github.com/kjgriman/test-react-swapi/blob/master/public/Screenshot_5.png "screenshot 5")
 
 
-![Screenshot_1](https://github.com/kjgriman/test-react-swapi/assets/29762514/3d473be7-07f6-48c1-a418-93521d7d29c0)
 
 
 
