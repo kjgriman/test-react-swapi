@@ -24,7 +24,6 @@ cd test-react-swapi
 npm install
 npm run dev
 
-### Screen Shots
 
 
 
