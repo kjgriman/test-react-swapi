@@ -6,7 +6,7 @@ export function useSearch(categorie){
     const [textSeacrh, setTextSearch] = useState('')
     const [dataFilter, setDataFilter] = useState(null)
     const [loading, setLoading] = useState(false)
-    const [errorMessage, setErrorMessage] = useState('')
+    const [errorMessage, setErrorMessage] = useState({ hasError: false })
 
     const onChangeTextSearch = (event) => {
         event.preventDefault();
@@ -19,8 +19,8 @@ export function useSearch(categorie){
         setLoading(true)
         searchByCategory(textSeacrh,categorie)
             .then((result) => {
-                if (result.results.length == 0) setErrorMessage('Not Found')
-                else setErrorMessage(null)
+                if (result.results.length == 0) setErrorMessage({ hasError: true, message: err.message })
+                else setErrorMessage({ hasError: false})
                 setDataFilter(result)
             }).catch((e) => {
                 console.log(e);

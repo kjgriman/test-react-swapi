@@ -23,7 +23,7 @@ export default function PlanetsPage() {
                 ref={searchRef}
                 className="m-4"
             />
-            {errorMessage && errorMessage}
+             {errorMessage.hasError && <div>{errorMessage.message}</div>}
             {dataFilter ? (
                 loading ? <Loading /> : (
                     <ListItem items={dataFilter} from='planets' />
