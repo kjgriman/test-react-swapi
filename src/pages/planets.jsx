@@ -18,7 +18,7 @@ export default function PlanetsPage() {
             <input
                 id="q"
                 aria-label="Search planets"
-                placeholder="Search and press key ENTER"
+                placeholder="Search and press ENTER"
                 type="search"
                 name="q"
                 onChange={onChangeTextSearch}

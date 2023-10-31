@@ -19,7 +19,7 @@ export default function StartShipsPage() {
         <input
             id="q"
             aria-label="Search Startships"
-            placeholder="Search and press key ENTER"
+            placeholder="Search and press ENTER"
             type="search"
             name="q"
             onChange={onChangeTextSearch}
@@ -36,7 +36,7 @@ export default function StartShipsPage() {
             ) : (
                 <Suspense fallback={<Loading />}>
                     {startShips ? (
-                        isLoading ? <Loading /> : <ListItem items={planets} from={Categories.StarShip} />
+                        isLoading ? <Loading /> : <ListItem items={startShips} from={Categories.StarShip} />
                     ) : (
                         <ListItem items={data} from={Categories.StarShip} />
                     )}

@@ -30,7 +30,6 @@ export default function Modal(props) {
       },[data])
 
       function getModal (type) {
-          console.log(type);
         var modal = {
           'people': <StarWarsCardPeople character={modalData}/>,
           'planets': <StarWarsPlanetCard planet={modalData}/>,

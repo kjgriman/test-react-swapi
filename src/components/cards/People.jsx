@@ -1,7 +1,11 @@
 import React from 'react';
 
 const StarWarsCardPeople = ({ character }) => {
-    console.log('character',character);
+    console.log('characterxxx',character);
+    let id
+    if (character) {
+       id=  Number(character?.url.split('/').slice(-2)[0])
+    }
     const imageFallback= 'https://i.pinimg.com/originals/c0/6c/9d/c06c9d63bda3f0a823aee1b2f47b0457.png'
 
   return (
@@ -10,7 +14,7 @@ const StarWarsCardPeople = ({ character }) => {
         <div className="md:flex-shrink-0">
         <img
             className="h-48 w-full object-cover md:w-48"
-            src="https://user-images.githubusercontent.com/5948318/38711580-ea19e088-3e9c-11e8-9a02-6b46805f311ds.png"  // Agrega la URL de la imagen del personaje
+            src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg` } // Agrega la URL de la imagen del personaje
             alt={`${character?.name} image`}
             onError={(e) => {
                 e.target.src = imageFallback;
@@ -37,7 +41,9 @@ const StarWarsCardPeople = ({ character }) => {
           </div>
         </div>
       </div>
+      
     </div>
+    
   );
 };
 

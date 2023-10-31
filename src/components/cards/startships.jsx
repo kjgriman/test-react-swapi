@@ -1,16 +1,19 @@
 import React from 'react';
 
 const StarWarsStarshipCard = ({ starship }) => {
-    console.log(starship);
-  const imageFallback = 'https://static.wikia.nocookie.net/starwars/images/9/9c/DCS_Destruction.png/revision/latest?cb=20130118053308'; // URL de la imagen de respaldo
-
-  return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+    let id
+    if (starship) {
+       id=  Number(starship?.url.split('/').slice(-2)[0])
+    }
+    const imageFallback = 'https://static.wikia.nocookie.net/starwars/images/9/9c/DCS_Destruction.png/revision/latest?cb=20130118053308'; // URL de la imagen de respaldo
+    
+    return (
+        <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
       <div className="md:flex">
         <div className="md:flex-shrink-0">
           <img
             className="h-48 w-full object-cover md:w-48"
-            src="URL_DE_LA_IMAGEN_DE_LA_NAVE"
+            src={`https://starwars-visualguide.com/assets/img/starships/${id}.jpg` } 
             alt={`${starship?.name} starship image`}
             onError={(e) => {
               e.target.src = imageFallback; // Cambia a la imagen de respaldo en caso de error

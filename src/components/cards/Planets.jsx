@@ -1,7 +1,12 @@
 import React from 'react';
+import { Popover } from '../PopOver';
 
 const StarWarsPlanetCard = ({ planet }) => {
-    console.log(planet);
+    console.log('planet');
+    let id
+    if (planet) {
+       id=  Number(planet?.url.split('/').slice(-2)[0])
+    }
   const imageFallback = 'https://user-images.githubusercontent.com/5948318/38711585-ef6a8970-3e9c-11e8-96c7-fc8a610cdde2.png'; // URL de la imagen de respaldo
 
   return (
@@ -10,7 +15,7 @@ const StarWarsPlanetCard = ({ planet }) => {
         <div className="md:flex-shrink-0">
           <img
             className="h-48 w-full object-cover md:w-48"
-            src="URL_DE_LA_IMAGEN_DEL_PLANETA"
+            src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg` } 
             alt={`${planet?.name} planet image`}
             onError={(e) => {
               e.target.src = imageFallback; // Cambia a la imagen de respaldo en caso de error
@@ -29,7 +34,9 @@ const StarWarsPlanetCard = ({ planet }) => {
           <p className="text-gray-500">Population: {planet?.population}</p>
           <p className="text-gray-500">Diameter: {planet?.diameter} km</p>
         </div>
+
       </div>
+        <Popover text={planet?.residents}/>
     </div>
   );
 };

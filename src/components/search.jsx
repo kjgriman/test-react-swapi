@@ -5,7 +5,7 @@ export default function SearchInput(props) {
                 {...props}
                 id="q"
                 aria-label="Search contacts"
-                placeholder="Search and press key ENTER"
+                placeholder="Search and press ENTER"
                 type="search"
                 name="q"
                 onChange={props.onChangeTextSearch}

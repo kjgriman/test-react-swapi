@@ -3,8 +3,6 @@ import NavMenu from "../components/navMenu";
 
 export default function Root() {
    
-
-
     return (
         <>
             <div id="sidebar">

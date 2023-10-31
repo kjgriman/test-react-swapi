@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.css'
+import Root from './routes/root'
 
 function App() {
 
   return (
     <>
-      asdas 
+      <Root />
     </>
   )
 }

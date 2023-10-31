@@ -1,10 +1,11 @@
 import { Categories } from "../enums/categories";
 import { _handleError, _throwSpecificError } from "../utils/handlerErrors";
+const URL_API ='http://swapi.dev/api'
 
 
 export async function getStartShips(page = 1) {
     try {
-        const response = await fetch(`http://swapi.dev/api/${Categories.StarShip}/?page=${page}`);
+        const response = await fetch(`${URL_API}/${Categories.StarShip}/?page=${page}`);
         if (!response.ok) {
             return _handleError(response.status);
         }
